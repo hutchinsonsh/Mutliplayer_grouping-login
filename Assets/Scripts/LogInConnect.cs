@@ -233,7 +233,7 @@ public class LogInConnect : MonoBehaviour
         Debug.Log("sending email");
         MailMessage mail = new MailMessage();
         SmtpClient SmtpServer = new SmtpClient("smtp.mail.me.com");
-        mail.From = new MailAddress("s.hills8@icloud.com");
+        mail.From = new MailAddress("//this was an icloud email; gmail is different setup");
         mail.To.Add(clientName);
         mail.Subject = "Unity Email Verification";
         mail.Body = "This is a test for email verification on unity";
@@ -241,7 +241,7 @@ public class LogInConnect : MonoBehaviour
         SmtpServer.DeliveryMethod = SmtpDeliveryMethod.Network;
         SmtpServer.Port = 587;
         //SmtpServer.Credentials = (ICredentialsByHost)CredentialCache.DefaultNetworkCredentials;
-        SmtpServer.Credentials = (ICredentialsByHost)new NetworkCredential("s.hills8@icloud.com", "cmau-pszo-toix-odpg");
+        SmtpServer.Credentials = (ICredentialsByHost)new NetworkCredential("//email@email.com", "pswd for email (specific to application)");
         SmtpServer.EnableSsl = true;
         SmtpServer.Timeout = 20000;
         try
